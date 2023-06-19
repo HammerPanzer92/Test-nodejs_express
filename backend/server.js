@@ -1,6 +1,7 @@
 const express = require("express");
 
-const port = 5000;
+const dotenv = require("dotenv").config();
+const port = process.env.PORT;
 
 const app = express();
 
@@ -11,4 +12,4 @@ app.use(express.urlencoded({extended: false}));
 app.use("/post", require('./routes/post.routes'));
 
 //Launch the server
-app.listen(port, () => console.log("Server listening at port " + port))
+app.listen(port, () => console.log("Server listening at port " + port));
