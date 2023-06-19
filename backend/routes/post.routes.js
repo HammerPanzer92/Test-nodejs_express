@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+//Routes for the backend using Express's Router
 router.get("/", (req, res) =>{
     res.json({message: "Fluffy"})
 });
